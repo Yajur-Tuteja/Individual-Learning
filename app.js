@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 // ReactElement(Objeect) => HTML(Browser Understands)
 const parent = React.createElement(
@@ -10,27 +12,27 @@ const parent = React.createElement(
                 React.createElement(
                     "h1",
                     {id: "heading"},
-                    "I am an H1 tag"
+                    "I am an H1 tag1"
                 ),
                 React.createElement(
                     "h2",
                     {id: "heading"},
-                    "I am an H2 tag"
+                    "I am an H2 tag1"
                 ),
             ]
         ),
         React.createElement("div",
             {id: "child2"},
-            [ 
+            [  
                 React.createElement(
                     "h1",
                     {id: "heading"},
-                    "I am an H1 tag"
+                    "I am an H1 tag2"
                 ),
                 React.createElement(
                     "h2",
                     {id: "heading"},
-                    "I am an H2 tag"
+                    "I am an H2 tag2"
                 ),
             ]
         )

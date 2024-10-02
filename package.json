@@ -1,0 +1,37 @@
+{
+  "name": "individual-learning",
+  "version": "1.0.0",
+  "description": "Individual Learning by Yajur",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yajur-Tuteja/Individual-Learning.git"
+  },
+  "keywords": [
+    "react",
+    "frontend",
+    "individual",
+    "learning",
+    "system",
+    "design"
+  ],
+  "author": "Yajur Tuteja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yajur-Tuteja/Individual-Learning/issues"
+  },
+  "homepage": "https://github.com/Yajur-Tuteja/Individual-Learning#readme",
+  "devDependencies": {
+    "parcel": "2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 versions of chrome"
+  ]
+}
