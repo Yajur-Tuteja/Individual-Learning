@@ -13,7 +13,6 @@ const AppLayout = () => {
             <Body />
         </div>
     )
-
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
