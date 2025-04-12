@@ -28,12 +28,12 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  useEffect(()=> {
+  useEffect(() => {
     initResList = fetchData();
-  },[]);
+  }, []);
 
   console.log("Body rendered")
-  
+
   // conditional rendering
   // if(resList.length === 0){
   //   return <Shimmer />
@@ -113,54 +113,54 @@ const Body = () => {
   // ]
 
   return filteredResList.length === 0 ? (
-    <Shimmer /> 
+    <Shimmer />
   ) : (
-        <div className="body">
-            <div className="filter">
-                <div className="search">
-                  <input 
-                    type="text" 
-                    className="search-box" 
-                    value={searchText}
-                    onChange={(e) => {
-                      setSearchText(e.target.value);
-                    }}
-                  />
-                  <button 
-                    className="search-btn"
-                    onClick={() => {
-                      // filter the restaurant cards and update the UI
-                      // need searchtext
-                      const filteredList = resList.filter(
-                        (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
-                      );
-                      setFilteredResList(filteredList);
-                      console.log(searchText);
-                    }}
-                  >Search</button>
-                </div>
-                <button 
-                    className="filter-btn"
-                    onClick={() => {
-                        const filteredList = resList.filter(
-                            (res) => res.info.avgRating > 4.3
-                        );
-                        setFilteredResList(filteredList);
-                        console.log(filteredList);
-                    }}
-                >Top Rated Restaurants</button>
-            </div>
-            <div className="res-container">
-                {
-                  filteredResList.map((res) => (
-                    <RestaurantCard 
-                        key = {res.info.id}
-                        resData = {res}
-                    />
-                  ))
-                }
-            </div>
+    <div className="body">
+      <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              // filter the restaurant cards and update the UI
+              // need searchtext
+              const filteredList = resList.filter(
+                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredResList(filteredList);
+              console.log(searchText);
+            }}
+          >Search</button>
         </div>
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredList = resList.filter(
+              (res) => res.info.avgRating > 4.3
+            );
+            setFilteredResList(filteredList);
+            console.log(filteredList);
+          }}
+        >Top Rated Restaurants</button>
+      </div>
+      <div className="res-container">
+        {
+          filteredResList.map((res) => (
+            <RestaurantCard
+              key={res.info.id}
+              resData={res}
+            />
+          ))
+        }
+      </div>
+    </div>
   )
 
 }

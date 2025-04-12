@@ -42,20 +42,20 @@
 
 function a() {
     var y = 9;
+    var u = 98;
     b();
-    console.log(x);
-    c();
     function b() {
-        console.log(x);
+        console.log("l");
+        console.log("l");
     }
 }
 
-function c() {
-    console.log(y);
-}
+// function c() {
+//     console.log(y);
+// }
 
+var we = 9;
 var x = 10;
 a();
-console.log(y);
 
 

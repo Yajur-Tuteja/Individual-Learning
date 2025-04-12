@@ -1,4 +1,3 @@
-
 #Parcel
 -Dev Build
 -Local Server
@@ -19,24 +18,23 @@
 -Different dev and prod
 
 #App Structure:
-/*
+/\*
+
 - Header
-    - Logo
-    - Nav Items
+
+  - Logo
+  - Nav Items
 
 - Body
-    - Search Functionality
-    - Resaurants card container
-        - Restaurant card
-            -Img
-            -Name,ratings,cuisine,delivery time
 
-- Footer
-    - Copyright
-    - Links
-    - Address
-    - Contact
-*/
+  - Search Functionality
+  - Resaurants card container
+    - Restaurant card
+      -Img
+      -Name,ratings,cuisine,delivery time
+
+- Footer - Copyright - Links - Address - Contact
+  \*/
 
 Two types of import/export
 
@@ -58,5 +56,10 @@ x can be a variable as well as a component too
 - Written by fb devs in react library
 
 - important hooks
-    - useState() - used to generate State variables
-    - useEffect()
+  - useState() - used to generate State variables
+  - useEffect()
+
+#Two types of routing
+
+- client-side routing
+- server-side routing
