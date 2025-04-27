@@ -40,22 +40,22 @@
 // x="posps"
 // console.log(x);
 
-function a() {
-    var y = 9;
-    var u = 98;
-    b();
-    function b() {
-        console.log("l");
-        console.log("l");
-    }
-}
+// function a() {
+//     var y = 9;
+//     var u = 98;
+//     b();
+//     function b() {
+//         console.log("l");
+//         console.log("l");
+//     }
+// }
 
 // function c() {
 //     console.log(y);
 // }
 
-var we = 9;
-var x = 10;
-a();
+// var we = 9;
+// var x = 10;
+// a();
 
 
