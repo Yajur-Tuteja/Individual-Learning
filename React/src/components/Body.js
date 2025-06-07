@@ -1,4 +1,5 @@
 import resArray from "../config/mockData";
+import useOnlineStatus from "../config/useOnlineStatus";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
@@ -112,6 +113,10 @@ const Body = () => {
   //         }
   //     },
   // ]
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) return <h1>No internet.</h1>
 
   return filteredResList.length === 0 ? (
     <Shimmer />
