@@ -27,9 +27,9 @@ function isOdd(x) {
 //     return max;
 // }
 
-console.log(output3);
+// console.log(output3);
 
-console.log(output2);
+// console.log(output2);
 
 
 const users = [
@@ -45,7 +45,7 @@ const fullNames = users.map(function (user) {
     return user.firstName + ' ' + user.lastName
 });
 
-console.log(fullNames)
+// console.log(fullNames)
 
 const obj = users.reduce(function (acc, curr) {
     if (acc[curr.age]) {
@@ -57,16 +57,42 @@ const obj = users.reduce(function (acc, curr) {
     return acc;
 }, {})
 
-console.log(obj);
+// console.log(obj);
 
 const filtered = users.filter((x) => x.age >= 40).map((x) => x.firstName)
 
-const reduced = users.reduce(function (acc, curr) {
+// const reduced = users.reduce(function (acc, curr) {
+//     if (curr.age >= 40) {
+//         acc.push(curr.firstName)
+//     }
+//     return acc;
+// }, [])
+
+// console.log(filtered)
+// console.log(reduced)
+
+Array.prototype.repo = function(fn, init) {
+    let res = init;
+    for(let i = 0; i< this.length; i++) {
+        res = fn(res, this[i]);
+    }
+    return res;
+}
+
+const polyfill = users.repo(function (acc, curr) {
     if (curr.age >= 40) {
         acc.push(curr.firstName)
     }
+    // console.log(acc)
     return acc;
 }, [])
 
-console.log(filtered)
-console.log(reduced)
+const youngest = users.repo(function (acc, curr) {
+    if (curr.age < acc.age) {
+        acc = curr
+    }
+    return acc;
+}, users[0])
+
+console.log(youngest);
+console.log(polyfill);
