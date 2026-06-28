@@ -8,23 +8,28 @@
 //     console.log(c);
 // }
 // x();
-// console.log(b);
-// console.log(b);
 // console.log(c);
+// console.log(c);
+// console.log(b);
 
 
-// let a = 10;
-// function z() {
-//     var a = 20;
-// }
-
-const a = 100;
+let a = 10;
 {
-    const a = 200;
-    {
-        const a = 300;
-        console.log(a);
-    }
+    a = 20;
     console.log(a);
 }
+// z();
 console.log(a);
+
+// let a = 100;
+// {
+//     let a = 200;
+//     {
+//         let a = 300;
+//         var x = 90;
+//         console.log(a);
+//     }
+//     console.log(a);
+// }
+// console.log(window.a);
+// console.log(window.x);

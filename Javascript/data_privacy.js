@@ -16,4 +16,6 @@ var counter1 = new Count();
 
 counter1.incCounter();
 counter1.incCounter();
+counter1.incCounter();
+counter1.decrementCounter();
 counter1.decrementCounter();

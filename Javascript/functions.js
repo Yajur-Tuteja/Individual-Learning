@@ -1,5 +1,4 @@
-// a();
-// b();
+a();
 
 // Function Statement
 function a() {
@@ -11,6 +10,8 @@ var b = function () {
     console.log("b has been called");
 }
 
+b();
+
 // Anonymous function
 // function () {
 //     console.log("j");
@@ -21,6 +22,9 @@ var c = function x() {
     console.log("c has been called");
 }
 
-// x();
+
+c();
+x();
+
 
 // First Class functions
