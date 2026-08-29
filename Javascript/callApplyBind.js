@@ -22,7 +22,7 @@ printFullName.apply(name2, ["Mumbai", "Maharashtra"]);
 
 // Bind Method
 
-let printMyName = printFullName.bind(name2,"Mumbai", "Maharashtra")
+let printMyName = printFullName.bind(name2, "Mumbai", "Maharashtra")
 
 // console.log(printMyName);
 // printMyName();
@@ -30,15 +30,16 @@ let printMyName = printFullName.bind(name2,"Mumbai", "Maharashtra")
 
 // polyfill for bind
 
-Function.prototype.mybind = function(target,...args) {
-    obj = this; 
-    console.log(args);
-    return function() {
-        obj.call(target,...args);
+Function.prototype.mybind = function (target, ...args) {
+    obj = this;
+    console.log(obj, args);
+    return function () {
+        console.log(this);
+        obj.call(target, ...args);
     }
-} 
+}
 
-let printMyName2 = printFullName.mybind(name1,"Chandigarh","Punjab")
+let printMyName2 = printFullName.mybind(name1, "Chandigarh", "Punjab")
 printMyName2()
 
 

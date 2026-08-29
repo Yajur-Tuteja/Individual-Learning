@@ -1,6 +1,6 @@
 function x() {
     // var i = 5;
-    for (let i = 1; i <= 5; i++) {
+    for (var i = 1; i <= 5; i++) {
         function close(x) {
             setTimeout(function () {
                 console.log(x);

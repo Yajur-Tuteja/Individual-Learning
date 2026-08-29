@@ -18,8 +18,11 @@ let object2 = {
 
 // Never do this
 object2.__proto__ = obj
+object2.getInfo()
 
 Function.prototype.mybind = function () {
     console.log("This is it");
 }
+
+fun.mybind();
 
