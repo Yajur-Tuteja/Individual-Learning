@@ -29,3 +29,18 @@ x(function y() {
 //     .addEventListener("click", function xyz() {
 //         console.log("This", ++count);
 //     });
+
+const cart = ["shoes", "pants", "kurta", "t-shirt"];
+
+api.createOrder()
+
+api.proceedToPayment()
+
+// callback hell
+api.createOrder(cart, function proceedToPayment() {
+    api.proceedToPayment(function () {
+        api.showOqrderSummary(function () {
+            api.updateWalletBalance();
+        })
+    });
+});

@@ -22,7 +22,7 @@ window.x();
 // this keyword inside a method
 const obj = {
     a: 10,
-    z: function() {
+    z: function () {
         console.log(this);
     }
 }
@@ -33,15 +33,15 @@ obj.z();
 
 const student = {
     name: "Yajur",
-    age: "24",
-    printName: function() {
+    age: "25",
+    printName: function () {
         console.log(this.name)
     }
 }
 
 const student2 = {
     name: "Shreya",
-    age: "21",
+    age: "23",
 }
 
 student.printName();
@@ -59,7 +59,7 @@ objects.xy();
 
 const objects2 = {
     a: 10,
-    xy: function() {
+    xy: function () {
         const yz = () => {
             console.log(this)
         }
@@ -67,3 +67,5 @@ const objects2 = {
     }
 }
 objects2.xy();
+
+// this inside dom4
